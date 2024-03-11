@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rastoaca Nicolae-Sergiu</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="imagines/logo.png" class="logo">
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>UBB CS Student for now</p>
+                    <h1>Hi, I'm <span>Sergiu</span> Rastoca <br> from Romania</h1>
+                </div>
+            </div>
+        </div>
+
+<!------------------ABOUT ME------------------>
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="imagines/user.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="subtitle">About Me</h1>
+                        <p>Sunt student la facultatea de matematica si informatica in cadrul universitatii
+                            Babes Bolyai Cluj-Napoca in anul 2. Pasiunea mea pentru in formatica am descoperit-o
+                            in clasa a 9-a si de atunci continui sa imi imbunatatesc skill urile pe acest domeniu.
+                            Dornic de a-si dezvolta si extinde cunostintele, o fire sociabila care se acomodeaza usor intr-un mediu nou
+                            si care nu are probleme in a colabora cu alti oameni. Consider ca as fi potrivit pentru orice job!
+                        </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programing Language</span><br>Java; Python; C/C++; HTML; CSS; SQL; 
+                                    Linux Command Line; Prolog; Lisp</li>
+                                <li><span>Digital Skills</span><br>Microsoft Office, IC3 Diploma</li>
+                                <li><span>Language Skills</span><br>English B2(Listening, Writing, Reading, Speaking); 
+                                    Romanian Mother tongue</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Self-Taught</span><br><a href="https://github.com/sergiurst1">Github Account</a></li>
+                                <li><span>Workshops</span><br><a href="https://www.opentext.com/">QA workshop at open text</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>High School 2017-2021</span><br><a href="https://cn-eminescu.ro/">Colegiul National "Mihai Eminescu" Suceava (Bacalaureat Diploma)</a></li>
+                                <li><span>College 2022-present</span><br><a href="https://www.cs.ubbcluj.ro/">Universitatea "Babes Bolyai" Cluj-Napoca</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!---------------CONTACT------------->
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="subtitle">Contact Me</h1>
+                        <p><i class="fa-regular fa-envelope"></i>sergiurastoca@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>0728413092</p>
+                        <div class="social-icons">
+                            <a href="http://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="imagines/CV.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link")
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link");
+               document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/2e8e5f6232.js" crossorigin="anonymous"></script>
+    </body>
+
+</html>
